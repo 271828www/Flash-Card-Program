@@ -1,6 +1,12 @@
 import random
 import os
 import json
+import time
+
+os.environ['TERM'] = 'xterm'
+
+def delay(seconds = 3):
+    time.sleep(seconds)
 
 def error_of_tolerance (true_answer, user_answer):
     difference = 0
@@ -33,12 +39,12 @@ with open(file_path, 'r') as file:
     flash_card_list = json.load(file)
 #
 while True:
-    #os.system('clear')
+    os.system('clear')
     current_card = random.choice(flash_card_list)
     print(current_card['question'])
     user_answer = input('your answer: ')
     difference = error_of_tolerance(current_card['answer'], user_answer)
-    print(difference)
+    print(f'wrongness: {difference}%')
     if user_answer == 'exit':
         break
     if user_answer == current_card['answer']:
@@ -47,6 +53,7 @@ while True:
         print('almost 100%')
     else:
         print('wrong!')
+    delay()
 
 with open(file_path, 'w') as file:
     json.dump(obj = flash_card_list, fp = file, indent=4)
