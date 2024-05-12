@@ -1,0 +1,26 @@
+[
+    {
+        "question": "where is microglia cell originated?",
+        "answer": "bone marrow origination",
+        "show_answer": false,
+        "show_timer": false,
+        "secs_to_show": 15,
+        "score": 0.0
+    },
+    {
+        "question": "what stimulate the cell wall growth during cytokinesis of plant cells?",
+        "answer": "phragmoplast ",
+        "show_answer": false,
+        "show_timer": false,
+        "secs_to_show": 15,
+        "score": 0.0
+    },
+    {
+        "question": "what is Nessl Body?",
+        "answer": "stained rough endoplasmic reticulum",
+        "show_answer": false,
+        "show_timer": false,
+        "secs_to_show": 15,
+        "score": 0.0
+    }
+]
