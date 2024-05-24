@@ -5,7 +5,10 @@
         "show_answer": false,
         "show_timer": false,
         "secs_to_show": 15,
-        "score": 0.0
+        "score": 0.0,
+        "attempts": [
+            100.0
+        ]
     },
     {
         "question": "what stimulate the cell wall growth during cytokinesis of plant cells?",
@@ -13,7 +16,8 @@
         "show_answer": false,
         "show_timer": false,
         "secs_to_show": 15,
-        "score": 0.0
+        "score": 0.0,
+        "attempts": []
     },
     {
         "question": "what is Nessl Body?",
@@ -21,6 +25,11 @@
         "show_answer": false,
         "show_timer": false,
         "secs_to_show": 15,
-        "score": 0.0
+        "score": 0.0,
+        "attempts": [
+            91.42857142857143,
+            91.42857142857143,
+            0.0
+        ]
     }
 ]
