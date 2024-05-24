@@ -26,7 +26,7 @@ while True:
     os.system('clear')
     current_card = random.choice(flash_card_list)
     print(current_card['question'])
-    user_answer = input('your answer: ')
+    user_answer = input('your answer:')
     difference = error_of_tolerance(current_card['answer'], user_answer)
     print(f'wrongness: {difference}%')
     if user_answer == 'exit':
