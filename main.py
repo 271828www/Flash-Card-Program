@@ -4,6 +4,7 @@ import os
 import json
 from comparison import error_of_tolerance
 from utils import delay
+# all modules
 
 os.environ['TERM'] = 'xterm'
 
@@ -19,7 +20,7 @@ flash_card = {
 }
 flash_card_list = []
 #
-with open(file_path, 'r') as file:
+with open(file_path, 'r') as file: #r means reading, w is writing, a is append,
     flash_card_list = json.load(file)
 #
 while True:
@@ -27,13 +28,13 @@ while True:
     current_card = random.choice(flash_card_list)
     print(current_card['question'])
     user_answer = input('your answer:')
-    difference = error_of_tolerance(current_card['answer'], user_answer)
-    print(f'wrongness: {difference}%')
     if user_answer == 'exit':
         break
+    difference = error_of_tolerance(current_card['answer'], user_answer)
+    print(f'wrongness: {difference}%')
     if user_answer == current_card['answer']:
         print("absolutely correct!")
-    elif error_of_tolerance(current_card['answer'], user_answer) <= 5:
+    elif difference <= 5:
         print('almost 100%')
     else:
         print('wrong!')
